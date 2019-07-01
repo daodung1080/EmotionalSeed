@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "164660717512",
+    "firebase_url": "https://fir-example-339e5.firebaseio.com",
+    "project_id": "fir-example-339e5",
+    "storage_bucket": "fir-example-339e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164660717512:android:a7f82ab0f62a4450",
+        "android_client_info": {
+          "package_name": "com.dung.fellingseed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164660717512-phdoekl38vp7hsudcgv4p1hnokiuvj3g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dung.fellingseed",
+            "certificate_hash": "25a7f99be3cb4ca9bc2e595ea2893414b4f1af63"
+          }
+        },
+        {
+          "client_id": "164660717512-7rrkj72t3acdhr65nv4b6p7is030h3si.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiMfIR9E5Z-IhAo9to3zBr3tJoJeSCGng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164660717512-7rrkj72t3acdhr65nv4b6p7is030h3si.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

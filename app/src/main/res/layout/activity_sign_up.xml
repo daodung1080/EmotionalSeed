@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".loginsignup.SignUpActivity"
+        android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                app:contentInsetStartWithNavigation="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_sign_up"
+                    android:textColor="@color/cl_background"
+                    android:textSize="16dp"
+                    android:layout_weight="8"
+                    android:textStyle="bold"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:background="@color/cl_background"
+            android:padding="@dimen/layout_padding_size">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_user"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/round_cl"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/imgSignUpAvatar"/>
+
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/imgSignUpAvatar"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:counterMaxLength="30"
+                app:counterEnabled="true"
+                android:id="@+id/tilSignUpFullname">
+
+            <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtSignUpFullname"
+                    android:hint="@string/edtSignUpFullname"
+                    android:textSize="@dimen/edt_txt_size"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tilSignUpFullname"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                android:id="@+id/tilSignUpEmail">
+
+            <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtSignUpEmail"
+                    android:hint="@string/edtSignUpEmail"
+                    android:textSize="@dimen/edt_txt_size"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tilSignUpEmail"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:id="@+id/tilSignUpPassword"
+                app:counterEnabled="true"
+                app:counterMaxLength="25"
+                app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtSignUpPassword"
+                    android:hint="@string/edtSignUpPassword"
+                    android:textSize="@dimen/edt_txt_size"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tilSignUpPassword"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:id="@+id/tilSignUpRepeat"
+                app:counterMaxLength="25"
+                app:counterEnabled="true"
+                app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtSignUpRepeat"
+                    android:hint="@string/edtSignUpRepeat"
+                    android:textSize="@dimen/edt_txt_size"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionDone"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+                android:text="@string/btnSignUpConfirm"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSignUpConfirm"
+                android:textSize="@dimen/btn_txt_size"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_btn_confirm"
+                android:textColor="@color/cl_background"
+                app:layout_constraintTop_toBottomOf="@+id/tilSignUpRepeat"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"/>
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

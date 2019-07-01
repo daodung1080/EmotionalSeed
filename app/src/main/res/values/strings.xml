@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Emotional Seed</string>
+
+    <!--Login Screen-->
+    <string name="title_log_in">Login</string>
+    <string name="edtLoginUsername">Username</string>
+    <string name="edtLoginPassword">Password</string>
+    <string name="btnLoginConfirm">Submit</string>
+    <string name="tvLoginSignUp"><u>Sign up an account</u></string>
+    <string name="cbLoginRemember">Remember your account?</string>
+
+    <!--Main Screen-->
+    <string name="title_activity_main_screen">Main Screen</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!--Sign Up-->
+    <string name="title_sign_up">Sign Up</string>
+    <string name="btnSignUpConfirm">Sign Up</string>
+    <string name="edtSignUpFullname">Fullname</string>
+    <string name="edtSignUpEmail">Email</string>
+    <string name="edtSignUpPassword">Password</string>
+    <string name="edtSignUpRepeat">Repeat Password</string>
+    <string name="menuCamera">Take a picture</string>
+    <string name="menuFolder">Use picture from folder</string>
+    <string name="menuTitle">Select your input genre</string>
+
+    <!--Main Screen-->
+    <string name="title_main_screen">Main Screen</string>
+    <string name="menuMainScreenPlant">PLANTS</string>
+    <string name="menuMainScreenProfile">PROFILE</string>
+
+    <!--Post Screen-->
+    <string name="title_post">Watering your plant</string>
+
+</resources>
