@@ -1,21 +1,25 @@
 package com.dung.fellingseed.user
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.dung.fellingseed.R
+import com.dung.fellingseed.base.BaseActivity
+import com.dung.fellingseed.user.fragment.PlantsFragment
+import com.dung.fellingseed.user.fragment.ProfileFragment
 import com.dung.fellingseed.user.post.PostActivity
 import com.luseen.spacenavigation.SpaceItem
 import com.luseen.spacenavigation.SpaceOnClickListener
 import kotlinx.android.synthetic.main.activity_main_screen.*
 
 
-class MainScreenActivity : AppCompatActivity() {
+class MainScreenActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
 
+        // Spawn first fragment
+        replaceFragment(R.id.flMainScreen, PlantsFragment())
         // Set up bottom navigation
         setUpBottomNavigation()
         // Set click function for bottom navigation
@@ -24,7 +28,7 @@ class MainScreenActivity : AppCompatActivity() {
     }
 
     private fun setUpClickFunction() {
-        bnMainScreen.setSpaceOnClickListener(object: SpaceOnClickListener{
+        bnMainScreen.setSpaceOnClickListener(object : SpaceOnClickListener {
             override fun onCentreButtonClick() {
                 // Change Screen when click watering icon
                 startActivity(Intent(this@MainScreenActivity, PostActivity::class.java))
@@ -34,6 +38,12 @@ class MainScreenActivity : AppCompatActivity() {
             }
 
             override fun onItemClick(itemIndex: Int, itemName: String?) {
+                if (itemIndex == 0) {
+                    replaceFragment(R.id.flMainScreen, PlantsFragment())
+                }
+                else if (itemIndex == 1) {
+                    replaceFragment(R.id.flMainScreen, ProfileFragment())
+                }
             }
 
         })
