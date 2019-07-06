@@ -40,7 +40,201 @@
             android:padding="@dimen/layout_padding_size"
             android:background="@color/cl_background">
 
+        <co.ceryle.radiorealbutton.RadioRealButtonGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/rdPositive"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:background="@drawable/ic_bg_toggle"
+                app:rrbg_animateDrawables_enter="overshoot"
+                app:rrbg_animateTexts_enter="overshoot"
+                app:rrbg_dividerColor="@color/round_cl"
+                app:rrbg_dividerSize="1dp"
+                app:rrbg_radius="5dp"
+                android:elevation="2dp"
+                app:rrbg_selectorColor="@color/colorPrimary"
+                app:rrbg_selectorSize="6dp"
+                android:id="@+id/rdPost"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
+            <co.ceryle.radiorealbutton.RadioRealButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    app:rrb_text="@string/rdPostPositive"
+                    android:id="@+id/rdPositive"
+                    app:rrb_drawable="@drawable/ic_user"
+                    app:rrb_drawableHeight="30dp"
+                    app:rrb_drawablePadding="@dimen/layout_padding_size"
+                    app:rrb_drawableGravity="top"
+                    app:rrb_drawableWidth="30dp"
+                    app:rrb_ripple="true"
+                    app:rrb_rippleColor="@color/round_cl"
+                    app:rrb_textColor="@color/colorPrimary"
+                    />
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    app:rrb_text="@string/rdPostNegative"
+                    app:rrb_drawableGravity="top"
+                    android:id="@+id/rdNegative"
+                    app:rrb_drawable="@drawable/ic_user"
+                    app:rrb_drawableHeight="30dp"
+                    app:rrb_drawablePadding="@dimen/layout_padding_size"
+                    app:rrb_drawableWidth="30dp"
+                    app:rrb_ripple="true"
+                    app:rrb_rippleColor="@color/round_cl"
+                    app:rrb_textColor="@color/colorPrimary"
+                    />
+        </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/elevation_card_view_size"
+                app:layout_constraintTop_toBottomOf="@+id/rdPost"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="1dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:id="@+id/llPost1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10"
+                        android:layout_margin="@dimen/layout_padding_size">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgPostAvatar"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1.5"
+                            app:civ_border_width="@dimen/border_image_size"
+                            app:civ_border_color="@color/round_cl"
+                            android:src="@drawable/ic_user"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8.5"
+                            android:id="@+id/tvPostFullname"
+                            android:paddingLeft="@dimen/layout_padding_size"
+                            android:textSize="@dimen/edt_txt_size"
+                            android:text="Dao Viet Dung"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/edtPostDesciption"
+                        android:layout_marginTop="@dimen/layout_padding_size"
+                        android:background="@null"
+                        android:hint="@string/edtPostDesciption"
+                        android:textSize="14dp"
+                        android:layout_margin="@dimen/layout_padding_size"
+                        android:paddingLeft="@dimen/layout_padding_size"
+                        android:gravity="top"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/llPostAddPicture">
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/round_cl"></View>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10"
+                            android:layout_margin="@dimen/layout_padding_size">
+
+                        <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1.5"
+                                app:srcCompat="@drawable/ic_home_black_24dp"/>
+
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8.5"
+                                android:layout_gravity="center"
+                                android:text="@string/tvPostPicture"
+                                android:textSize="@dimen/edt_txt_size"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/llPostEmotion">
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/round_cl"></View>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10"
+                            android:layout_margin="@dimen/layout_padding_size">
+
+                        <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1.5"
+                                app:srcCompat="@drawable/ic_notifications_black_24dp"/>
+
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8.5"
+                                android:layout_gravity="center"
+                                android:textSize="@dimen/edt_txt_size"
+                                android:text="@string/tvPostEmotion"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
 
     </android.support.constraint.ConstraintLayout>
 
